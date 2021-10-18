@@ -1,0 +1,125 @@
+###############################
+# ЗАПУСК КОММАНДНОЙ СТРОКИ
+###############################
+
+# Вызов окна ВЫПОЛНИТЬ
+win+r
+
+# Написать в окне ВЫПОЛНИТЬ cmd для запуска коммандной строки
+cmd
+
+###############################
+# РАБОТА С КОММАНДНОЙ СТРОКОЙ
+###############################
+
+# Переход в каталог d
+d:
+
+# Переход в папку name по пути: d:\catatlog\name из директории d:
+cd catatlog\name
+
+# Вернуться на шаг назад (из d:\catatlog\name в d:\catatlog)
+cd..
+
+# Вывести список папок в текущем каталоге
+dir
+
+# Создать папку newFolder в текущей дериктории
+mkdir newFolder
+
+# Создать файл пустой файл new.txt
+NUL> new.txt
+
+# Очистить консоль
+cls
+
+###############################
+# РАБОТА С КОММНДАМИ GIT
+###############################
+
+(файл .gitignore содержит список файлов, которые git игнорирует)
+(строка *.psd игнорит все файлы с расширением psd)
+(строка /tmp игнорит всю папку tmp)
+
+# Вывод комманд
+git --help
+
+# Инициализировать контрой версий в текущем каталоге
+git init
+
+# Проверить состояние контроля версий в текущем каталоге
+git status
+
+# Проверить историю изменений
+git log
+
+# Отслеживать изменения в файле index.html
+git add index.html
+
+# Отслеживать изменения всех файлов в текущем каталоге
+git add .
+
+# Создает коммит с сообщением 'commit message'
+git commit -m 'commit message'
+
+# Показывает список веток
+git branch
+
+# Создает новую ветку branch-name
+git branch branch-name
+
+# удаляет ветку branch-name
+git branch -D branch-name
+
+# Переключается на последний коммит в ветке branch-name
+git checkout branch-name
+
+# Создает и переключается на ветку branch-name
+git checkout -b branch-name
+
+# Совмещает текущую ветку с branch-name
+git merge branch-name
+
+###############################
+# Конфигурация и параметры git
+
+# Показывает имя пользователя
+git config --global user.name
+
+# Показывает email пользователя
+git config --global user.email
+
+# Изменяет имя пользователя на 'new user'
+git config --global user.name 'new user'
+
+# Изменяет email пользователя на 'test@mail.ru'
+git config --global user.email 'test@mail.ru'
+
+# Подключение к GitHub репозиторию https://github.com/chelovek-gorod/test.git
+git remote add origin https://github.com/chelovek-gorod/test.git
+
+# Залить изменения на удаленный репозиторий в ветку master
+# (используется при первом подключении или новом ветвлении)
+git push --set-upstream origin master
+
+# Забирает изменения с удаленного репозитория origin ветки b2 в локальный
+git pull origin b2
+
+# Залить изменения на удаленный репозиторий в ранее используемые ветки
+git push
+
+# Задаем переменную tt для URL репозитория https://github.com/dianitGomel/test2 для pull-ов
+git remote add tt https://github.com/dianitGomel/test2
+
+# Залить изменения на удаленный репозиторий tt в ветку master
+git push tt master
+
+# Забирает изменения с удаленного репозитория, ветки b2 в локальный
+git pull tt b2
+
+-------------------------------------------
+# Клонирует проект с удаленного репозитория
+git clone
+-------------------------------------------
+# Откат к последнему коммиту
+git reset --hard
